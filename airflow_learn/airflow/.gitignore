@@ -1,0 +1,65 @@
+# ===================================================
+# GERAIS DE SISTEMA (macOS e Windows)
+# ===================================================
+.DS_Store
+Thumbs.db
+
+# ===================================================
+# PYTHON (Geral)
+# ===================================================
+# Arquivos de bytecode compilado
+*.pyc
+*.pyd
+__pycache__/
+
+# Ambientes virtuais (Venvs)
+venv/
+.venv/
+env/
+.env/
+
+# Pacotes instalados localmente (eggs, wheels)
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# ===================================================
+# DOCKER (Exclusões)
+# ===================================================
+# Arquivos .env com variáveis de ambiente (credenciais)
+.env
+
+# Logs e volumes gerados pelo Docker Compose
+# Isso garante que dados e logs do Airflow não sejam versionados
+logs/
+.volumes/
+data/
+
+# Arquivos de cache do Docker Build (se usados)
+.dockerignore
+
+# ===================================================
+# AIRFLOW ESPECÍFICO
+# ===================================================
+# Banco de dados SQLite padrão do Airflow
+# **IMPORTANTE**: Altere 'airflow.db' se você usou um nome diferente!
+airflow.db
+
+# Diretório de logs do Airflow
+# Geralmente 'logs' se não estiver montado dentro do volume
+# (JÁ INCLUÍDO NA SEÇÃO DOCKER ACIMA, mas reforçando)
+
+# Arquivos de PID (Process IDs)
+*.pid
+
+# Arquivos de Sockets
+*.sock
+
+# Arquivos de configurações locais (que podem ter credenciais)
+airflow.cfg
+
+# ===================================================
+# NOTEBOOKS / FERRAMENTAS
+# ===================================================
+.ipynb_checkpoints/
